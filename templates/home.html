@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <h1>Welcome to your Flask Starter App!</h1>
+  {% if current_user.is_authenticated %}
+    <p>Hello, {{ current_user.username }}!</p>
+  {% else %}
+    <p>Please <a href="/login">log in</a> or <a href="/register">register</a>.</p>
+  {% endif %}
+{% endblock %}
